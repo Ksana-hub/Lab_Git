@@ -3,11 +3,11 @@
 
 namespace BinaryIO {
 
-std::vector<char> serializeInt(int value) {
-    std::vector<char> data(sizeof(int));
-    std::memcpy(data.data(), &value, sizeof(int));
-    return data;
-}
+    std::vector<char> serializeInt(int value) {
+        std::vector<char> data(sizeof(int) + 1); // версия A
+        std::memcpy(data.data(), &value, sizeof(int));
+        return data;
+    }
 
 int deserializeInt(const std::vector<char>& data) {
     int value;
