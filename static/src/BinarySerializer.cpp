@@ -4,14 +4,10 @@
 namespace BinaryIO {
 
     std::vector<char> serializeInt(int value) {
-        std::vector<char> data(sizeof(int) + 1); // версия A
+        std::vector<char> data(sizeof(int));
         std::memcpy(data.data(), &value, sizeof(int));
         return data;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> feature-B
 
 int deserializeInt(const std::vector<char>& data) {
     int value;
