@@ -11,13 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. Скачиваем код
     - uses: actions/checkout@v3
 
-    - name: Setup C++ compiler
-      uses: actions/setup-cpp@v1
+    # 2. Устанавливаем CMake (Ubuntu уже имеет gcc/g++)
+    - name: Install CMake
+      run: sudo apt-get update && sudo apt-get install -y cmake build-essential
 
+    # 3. Конфигурируем сборку
     - name: Configure CMake
       run: cmake -S . -B build
 
+    # 4. Собираем проект
     - name: Build
       run: cmake --build build
