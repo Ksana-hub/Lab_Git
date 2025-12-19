@@ -8,7 +8,10 @@ namespace BinaryIO {
         std::memcpy(data.data(), &value, sizeof(int));
         return data;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature-B
 
 int deserializeInt(const std::vector<char>& data) {
     int value;
