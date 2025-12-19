@@ -1,0 +1,16 @@
+# CMake
+build/
+CMakeCache.txt
+CMakeFiles/
+
+# Output
+out/
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# OS
+*.log
+.DS_Store
