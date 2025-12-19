@@ -18,4 +18,8 @@ std::vector<char> BinaryFileHandler::readFromFile(const std::string& filename) {
     return data;
 }
 
+std::size_t BinaryFileHandler::getFileSize(const std::string& filename) {
+    return std::filesystem::file_size(filename);
+}
+
 }
